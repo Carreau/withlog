@@ -1,0 +1,10 @@
+language: python
+python:
+    - 3.5
+    - 3.4
+    - 3.3
+install:
+    - pip install flit pytest
+    - flit install --symlink
+script:
+    - py.test
