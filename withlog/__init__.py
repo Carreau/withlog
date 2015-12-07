@@ -4,7 +4,7 @@ A context manager to deal with logging level as context manager.
 """
 
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 
 from colorama import Fore, Back, Style
