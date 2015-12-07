@@ -50,7 +50,7 @@ def print_statement(p):
         yield (p, oldprint)
     except Exception as e:
         builtins.print = oldprint
-        print(e)
+        raise
 
 @contextmanager
 def input():
@@ -116,11 +116,9 @@ class Message:
     def __exit__(self, *args):
         self.log(' ')
         if self.sup:
-            self.sup.log(' ')
             self.sup=None
         if gStack[-1] is self:
             gStack.pop()
-        pass
 
 class Info(Message):
     def __init__(self, title):
